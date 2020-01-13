@@ -6,17 +6,9 @@ using System.Threading.Tasks;
 
 namespace TPpraktika
 {
-    class Class1 : Interface
+    class Class2 : Interface
     {
-        private int[] a;
-
-        public int this[int index]
-        {
-            get
-            {
-                return a[index];
-            }
-        }
+        private List<int> a;
 
         public string m1()
         {
@@ -28,7 +20,15 @@ namespace TPpraktika
             return "m1" + add;
         }
 
-        public Class1(int size)
+        public int this[int index]
+        {
+            get
+            {
+                return a[index];
+            }
+        }
+
+        public Class2(int size)
         {
             Random r = new Random();
             if (size < 10)
@@ -36,7 +36,7 @@ namespace TPpraktika
                 size = r.Next(10, 20);
             }
 
-            a = new int[size];
+            a = new List<int>(size);
             for (int i = 0; i < size; i++)
             {
                 a[i] = r.Next(10);
