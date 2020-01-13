@@ -10,6 +10,14 @@ namespace TPpraktika
     {
         private List<int> a;
 
+        public string Name
+        {
+            get
+            {
+                return typeof(Class2).Name + " " + a.Count;
+            }
+        }
+
         public string m1()
         {
             return "m1";
@@ -39,7 +47,7 @@ namespace TPpraktika
             a = new List<int>(size);
             for (int i = 0; i < size; i++)
             {
-                a[i] = r.Next(10);
+                a.Add(r.Next(10));
             }
         }
 

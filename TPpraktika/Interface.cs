@@ -15,5 +15,7 @@ namespace TPpraktika
         {
             get;
         }
+
+        string Name { get; }
     }
 }

@@ -10,6 +10,14 @@ namespace TPpraktika
     {
         private int[] a;
 
+        public string Name
+        {
+            get
+            {
+                return typeof(Class1).Name + " " + a.Length;
+            }
+        }
+
         public int this[int index]
         {
             get
