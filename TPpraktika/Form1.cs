@@ -12,7 +12,7 @@ namespace TPpraktika
 {
     public partial class Form1 : Form
     {
-        Class1 cl = new Class1();
+        Class1 cl;
          
         public Form1()
         {
@@ -21,7 +21,8 @@ namespace TPpraktika
 
         private void buttonSize_Click(object sender, EventArgs e)
         {
-            textBoxArray.Text = cl.Size(Convert.ToInt32(textBoxSize.Text));
+            cl = new Class1(Convert.ToInt32(textBoxSize.Text));
+            textBoxArray.Text = cl.ToString();
         }
 
         private void buttonMethod1_Click(object sender, EventArgs e)

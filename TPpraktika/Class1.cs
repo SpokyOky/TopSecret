@@ -20,15 +20,23 @@ namespace TPpraktika
             return "m2";
         }
 
-        public string Size(int size)
+        public Class1(int size)
         {
             Random r = new Random();
+            if (size < 10)
+            {
+                size = r.Next(10, 20);
+            }
+
             a = new int[size];
             for (int i = 0; i < size; i++)
             {
                 a[i] = r.Next(10);
             }
+        }
 
+        public override string ToString()
+        {
             string res = "";
             foreach (int i in a)
             {
