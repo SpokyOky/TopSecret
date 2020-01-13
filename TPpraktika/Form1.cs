@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,7 @@ namespace TPpraktika
             int n = r.Next(2, 4);
             int m = r.Next(2, 4);
             classes = new List<Interface>(n + m);
-            
+
             for (int i = 0; i < n; i++)
             {
                 classes.Add(new Class1(Convert.ToInt32(textBoxSize.Text)));
@@ -98,6 +99,28 @@ namespace TPpraktika
             {
                 textBox1.Text += next("her") + "; ";
             }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                var filename = saveFileDialog1.FileName;
+                if (File.Exists(filename))
+                {
+                    File.Delete(filename);
+                }
+                using (StreamWriter sw = new StreamWriter(filename))
+                {
+                    foreach (var i in classes)
+                    {
+                        sw.WriteLine(i.Name + " : " + i.ToString() +
+                            " " + i.m1() + " " + i.m1("her"));
+                    }
+                }
+                MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }
