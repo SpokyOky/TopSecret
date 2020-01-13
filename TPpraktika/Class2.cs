@@ -41,7 +41,7 @@ namespace TPpraktika
             Random r = new Random();
             if (size < 10)
             {
-                size = r.Next(10, 20);
+                throw new LessThen10Exception();
             }
 
             a = new List<int>(size);

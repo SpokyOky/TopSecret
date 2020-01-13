@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace TPpraktika
 
     public partial class Form1 : Form
     {
+        Logger Logger;
+
         Class1 cl;
 
         List<Interface> classes;
@@ -26,12 +29,21 @@ namespace TPpraktika
         public Form1()
         {
             InitializeComponent();
+            Logger = LogManager.GetCurrentClassLogger();
         }
 
         private void buttonSize_Click(object sender, EventArgs e)
         {
-            cl = new Class1(Convert.ToInt32(textBoxSize.Text));
-            textBoxArray.Text = cl.ToString();
+            try
+            {
+                cl = new Class1(Convert.ToInt32(textBoxSize.Text));
+                textBoxArray.Text = cl.ToString();
+            }
+            catch (LessThen10Exception ex)
+            {
+                MessageBox.Show("pizdec");
+                Logger.Error("pizdec");
+            }
         }
 
         private void buttonMethod1_Click(object sender, EventArgs e)
@@ -67,22 +79,54 @@ namespace TPpraktika
 
         private void buttonFollow1_Click(object sender, EventArgs e)
         {
-            method1 += classes[listBox1.SelectedIndex].m1;
+            try
+            {
+                method1 += classes[listBox1.SelectedIndex].m1;
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("pidaras");
+                Logger.Error("pidoras");
+            }
         }
 
         private void buttonFollow2_Click(object sender, EventArgs e)
         {
-            method2 += classes[listBox1.SelectedIndex].m1;
+            try
+            {
+                method2 += classes[listBox1.SelectedIndex].m1;
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("pidaras");
+                Logger.Error("pidoras");
+            }
         }
 
         private void buttonUnfollow1_Click(object sender, EventArgs e)
         {
-            method1 -= classes[listBox1.SelectedIndex].m1;
+            try
+            {
+                method1 -= classes[listBox1.SelectedIndex].m1;
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("pidaras");
+                Logger.Error("pidoras");
+            }
         }
 
         private void buttonUnfollow2_Click(object sender, EventArgs e)
         {
-            method2 -= classes[listBox1.SelectedIndex].m1;
+            try
+            {
+                method2 -= classes[listBox1.SelectedIndex].m1;
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("pidaras");
+                Logger.Error("pidoras");
+            }
         }
 
         private void buttonInvoke1_Click(object sender, EventArgs e)
@@ -91,6 +135,7 @@ namespace TPpraktika
             {
                 textBox1.Text += next() + "; ";
             }
+            Logger.Info("invoke1");
         }
 
         private void buttonInvoke2_Click(object sender, EventArgs e)
@@ -99,6 +144,7 @@ namespace TPpraktika
             {
                 textBox1.Text += next("her") + "; ";
             }
+            Logger.Info("invoke2");
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +166,7 @@ namespace TPpraktika
                 }
                 MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            Logger.Info("save");
         }
     }
 }

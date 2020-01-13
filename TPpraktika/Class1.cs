@@ -23,7 +23,11 @@ namespace TPpraktika
         {
             get
             {
-                return a[index];
+                if (index <= a.Length)
+                {
+                    return a[index];
+                }
+                throw new IndexOutOfRangeException();
             }
         }
 
@@ -42,7 +46,7 @@ namespace TPpraktika
             Random r = new Random();
             if (size < 10)
             {
-                size = r.Next(10, 20);
+                throw new LessThen10Exception();
             }
 
             a = new int[size];
