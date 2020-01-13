@@ -49,7 +49,7 @@ namespace TPpraktika
             int n = r.Next(2, 4);
             int m = r.Next(2, 4);
             classes = new List<Interface>(n + m);
-            
+
             for (int i = 0; i < n; i++)
             {
                 classes.Add(new Class1(Convert.ToInt32(textBoxSize.Text)));

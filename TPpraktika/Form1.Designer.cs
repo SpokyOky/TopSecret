@@ -211,6 +211,7 @@
             this.Controls.Add(this.textBoxArray);
             this.Controls.Add(this.buttonSize);
             this.Controls.Add(this.textBoxSize);
+
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
