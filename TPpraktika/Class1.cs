@@ -15,9 +15,9 @@ namespace TPpraktika
             return "m1";
         }
 
-        public string m2()
+        public string m1(string add)
         {
-            return "m2";
+            return "m1" + add;
         }
 
         public Class1(int size)

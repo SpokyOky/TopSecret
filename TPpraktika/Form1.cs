@@ -32,7 +32,7 @@ namespace TPpraktika
 
         private void buttonMethod2_Click(object sender, EventArgs e)
         {
-            textBoxMethod.Text = cl.m2();
+            textBoxMethod.Text = cl.m1(textBoxSize.Text);
         }
     }
 }
