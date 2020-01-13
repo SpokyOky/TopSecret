@@ -37,6 +37,13 @@
             this.buttonSetList = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.buttonFollow1 = new System.Windows.Forms.Button();
+            this.buttonFollow2 = new System.Windows.Forms.Button();
+            this.buttonUnfollow1 = new System.Windows.Forms.Button();
+            this.buttonUnfollow2 = new System.Windows.Forms.Button();
+            this.buttonInvoke1 = new System.Windows.Forms.Button();
+            this.buttonInvoke2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBoxSize
@@ -116,11 +123,85 @@
             this.listBox2.Size = new System.Drawing.Size(120, 95);
             this.listBox2.TabIndex = 8;
             // 
+            // buttonFollow1
+            // 
+            this.buttonFollow1.Location = new System.Drawing.Point(50, 215);
+            this.buttonFollow1.Name = "buttonFollow1";
+            this.buttonFollow1.Size = new System.Drawing.Size(75, 23);
+            this.buttonFollow1.TabIndex = 9;
+            this.buttonFollow1.Text = "Follow1";
+            this.buttonFollow1.UseVisualStyleBackColor = true;
+            this.buttonFollow1.Click += new System.EventHandler(this.buttonFollow1_Click);
+            // 
+            // buttonFollow2
+            // 
+            this.buttonFollow2.Location = new System.Drawing.Point(131, 215);
+            this.buttonFollow2.Name = "buttonFollow2";
+            this.buttonFollow2.Size = new System.Drawing.Size(75, 23);
+            this.buttonFollow2.TabIndex = 10;
+            this.buttonFollow2.Text = "Follow2";
+            this.buttonFollow2.UseVisualStyleBackColor = true;
+            this.buttonFollow2.Click += new System.EventHandler(this.buttonFollow2_Click);
+            // 
+            // buttonUnfollow1
+            // 
+            this.buttonUnfollow1.Location = new System.Drawing.Point(50, 244);
+            this.buttonUnfollow1.Name = "buttonUnfollow1";
+            this.buttonUnfollow1.Size = new System.Drawing.Size(75, 23);
+            this.buttonUnfollow1.TabIndex = 11;
+            this.buttonUnfollow1.Text = "Unfollow1";
+            this.buttonUnfollow1.UseVisualStyleBackColor = true;
+            this.buttonUnfollow1.Click += new System.EventHandler(this.buttonUnfollow1_Click);
+            // 
+            // buttonUnfollow2
+            // 
+            this.buttonUnfollow2.Location = new System.Drawing.Point(131, 244);
+            this.buttonUnfollow2.Name = "buttonUnfollow2";
+            this.buttonUnfollow2.Size = new System.Drawing.Size(75, 23);
+            this.buttonUnfollow2.TabIndex = 12;
+            this.buttonUnfollow2.Text = "Unfollow2";
+            this.buttonUnfollow2.UseVisualStyleBackColor = true;
+            this.buttonUnfollow2.Click += new System.EventHandler(this.buttonUnfollow2_Click);
+            // 
+            // buttonInvoke1
+            // 
+            this.buttonInvoke1.Location = new System.Drawing.Point(50, 273);
+            this.buttonInvoke1.Name = "buttonInvoke1";
+            this.buttonInvoke1.Size = new System.Drawing.Size(75, 23);
+            this.buttonInvoke1.TabIndex = 13;
+            this.buttonInvoke1.Text = "Invoke1";
+            this.buttonInvoke1.UseVisualStyleBackColor = true;
+            this.buttonInvoke1.Click += new System.EventHandler(this.buttonInvoke1_Click);
+            // 
+            // buttonInvoke2
+            // 
+            this.buttonInvoke2.Location = new System.Drawing.Point(131, 273);
+            this.buttonInvoke2.Name = "buttonInvoke2";
+            this.buttonInvoke2.Size = new System.Drawing.Size(75, 23);
+            this.buttonInvoke2.TabIndex = 14;
+            this.buttonInvoke2.Text = "Invoke2";
+            this.buttonInvoke2.UseVisualStyleBackColor = true;
+            this.buttonInvoke2.Click += new System.EventHandler(this.buttonInvoke2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(229, 215);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(303, 20);
+            this.textBox1.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonInvoke2);
+            this.Controls.Add(this.buttonInvoke1);
+            this.Controls.Add(this.buttonUnfollow2);
+            this.Controls.Add(this.buttonUnfollow1);
+            this.Controls.Add(this.buttonFollow2);
+            this.Controls.Add(this.buttonFollow1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonSetList);
@@ -148,6 +229,13 @@
         private System.Windows.Forms.Button buttonSetList;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button buttonFollow1;
+        private System.Windows.Forms.Button buttonFollow2;
+        private System.Windows.Forms.Button buttonUnfollow1;
+        private System.Windows.Forms.Button buttonUnfollow2;
+        private System.Windows.Forms.Button buttonInvoke1;
+        private System.Windows.Forms.Button buttonInvoke2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
