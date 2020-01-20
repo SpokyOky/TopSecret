@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPpraktika
 {
-    interface Interface
+    interface Interface : IComparable
     {
         string m1();
         string m1(string add);

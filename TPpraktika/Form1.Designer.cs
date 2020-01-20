@@ -36,7 +36,6 @@
             this.buttonMethod2 = new System.Windows.Forms.Button();
             this.buttonSetList = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.buttonFollow1 = new System.Windows.Forms.Button();
             this.buttonFollow2 = new System.Windows.Forms.Button();
             this.buttonUnfollow1 = new System.Windows.Forms.Button();
@@ -45,11 +44,11 @@
             this.buttonInvoke2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.buttonSort = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.textBoxMyNum = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,14 +120,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 7;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(412, 103);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 95);
-            this.listBox2.TabIndex = 8;
             // 
             // buttonFollow1
             // 
@@ -218,7 +209,7 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -232,20 +223,19 @@
             this.buttonSort.UseVisualStyleBackColor = true;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
-            // listBox3
+            // textBoxMyNum
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(376, 248);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(131, 43);
-            this.listBox3.TabIndex = 18;
+            this.textBoxMyNum.Location = new System.Drawing.Point(432, 103);
+            this.textBoxMyNum.Name = "textBoxMyNum";
+            this.textBoxMyNum.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMyNum.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.textBoxMyNum);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonInvoke2);
@@ -254,7 +244,6 @@
             this.Controls.Add(this.buttonUnfollow1);
             this.Controls.Add(this.buttonFollow2);
             this.Controls.Add(this.buttonFollow1);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonSetList);
             this.Controls.Add(this.buttonMethod2);
@@ -284,7 +273,6 @@
         private System.Windows.Forms.Button buttonMethod2;
         private System.Windows.Forms.Button buttonSetList;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button buttonFollow1;
         private System.Windows.Forms.Button buttonFollow2;
         private System.Windows.Forms.Button buttonUnfollow1;
@@ -297,7 +285,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.Button buttonSort;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.TextBox textBoxMyNum;
     }
 }
 

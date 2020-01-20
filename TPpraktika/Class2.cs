@@ -60,5 +60,10 @@ namespace TPpraktika
             }
             return res;
         }
+
+        public int CompareTo(object obj)
+        {
+            return new Random().Next(-1, 2);
+        }
     }
 }
