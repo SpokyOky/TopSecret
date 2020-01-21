@@ -53,6 +53,10 @@ namespace TPpraktika
         {
             get
             {
+                if ((index < 0) || (index >= a.Count()))
+                {
+                    throw new IndexOutOfRangeException();
+                }
                 return a[index];
             }
         }
@@ -84,7 +88,20 @@ namespace TPpraktika
 
         public int CompareTo(object obj)
         {
-            return new Random().Next(-1, 2);
+            if (obj == null) //если сравниваем с пустым обьектом
+            { 
+                return 0;//возвращаем 0
+            }
+
+            if ((obj as Interface).Name == this.Name) //если имена классов совпадают
+            { 
+                return 0;//возвращаем 0
+            }
+            else //иначе рандомно возвращаем -1, 0, 1
+            {
+                Random r = new Random();
+                return r.Next(-1, 2); 
+            }
         }
     }
 }

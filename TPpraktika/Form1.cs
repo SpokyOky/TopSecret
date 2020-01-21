@@ -153,24 +153,26 @@ namespace TPpraktika
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (saveFileDialog1.ShowDialog() //вызов окошка с сохранением
+                == System.Windows.Forms.DialogResult.OK)  //условие (если нажали ок в окне сохранения)
             {
-                var filename = saveFileDialog1.FileName;
-                if (File.Exists(filename))
+                var filename = saveFileDialog1.FileName; //строка с именем файла
+                if (File.Exists(filename)) //проверка (если файл существует (перезапись))
                 {
-                    File.Delete(filename);
+                    File.Delete(filename); //если уже такой существует - удаляем
                 }
-                using (StreamWriter sw = new StreamWriter(filename))
+                using (StreamWriter sw = new StreamWriter(filename)) //создаем StreamWriter для этого файла
                 {
-                    foreach (var i in classes)
+                    foreach (var i in classes) //цикл по списку обьектов
                     {
-                        sw.WriteLine(i.Name + " : " + i.ToString() +
-                            " " + i.m1() + " " + i.m1(textBoxMyNum.Text));
+                        sw.WriteLine(i.Name + " : " + i.ToString() + //запись в файл "имя класса" : "элементы массива/списка"
+                            " " + i.m1() + " " + i.m1(textBoxMyNum.Text)); //"результат первого метода" "результат второго метода"
                     }
                 }
-                MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Сохранение прошло успешно", "Результат",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information); //вывод окна, если сохранение прошло успешно
             }
-            Logger.Info("save");
+            Logger.Info("save"); //запись в лог о сохранении
         }
 
         private void buttonSort_Click(object sender, EventArgs e)

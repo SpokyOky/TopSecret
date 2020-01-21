@@ -23,11 +23,11 @@ namespace TPpraktika
         {
             get
             {
-                if (index <= a.Length)
+                if ((index < 0) || (index >= a.Length))
                 {
-                    return a[index];
+                    throw new IndexOutOfRangeException();
                 }
-                throw new IndexOutOfRangeException();
+                return a[index];
             }
         }
 
@@ -89,7 +89,21 @@ namespace TPpraktika
 
         public int CompareTo(object obj)
         {
-            return new Random().Next(-1, 2);
+            if (obj == null)
+            {
+                return 0;
+            }
+
+            if ((obj as Interface).Name == this.Name)
+            {
+                return 0;
+            }
+
+            else
+            {
+                Random r = new Random();
+                return r.Next(-1, 2);
+            }
         }
     }
 }
