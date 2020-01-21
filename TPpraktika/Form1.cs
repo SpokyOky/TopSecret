@@ -41,8 +41,8 @@ namespace TPpraktika
             }
             catch (LessThen10Exception ex)
             {
-                MessageBox.Show("pizdec");
-                Logger.Error("pizdec");
+                MessageBox.Show("LessThen10");
+                Logger.Error("LessThen10");
             }
         }
 
@@ -61,8 +61,8 @@ namespace TPpraktika
             try
             {
                 Random r = new Random();
-                int n = r.Next(2, 4);
-                int m = r.Next(2, 4);
+                int n = r.Next(5, 11);
+                int m = r.Next(5, 11);
                 classes = new List<Interface>(n + m);
                 for (int i = 0; i < n; i++)
                 {
@@ -76,8 +76,8 @@ namespace TPpraktika
                 }
             } catch (LessThen10Exception ex)
             {
-                MessageBox.Show("pidoras");
-                Logger.Error("pidoras");
+                MessageBox.Show("LessThen10");
+                Logger.Error("LessThen10");
             }
         }
 
@@ -89,8 +89,8 @@ namespace TPpraktika
             }
             catch (IndexOutOfRangeException ex)
             {
-                MessageBox.Show("pidoras");
-                Logger.Error("pidoras");
+                MessageBox.Show("IndexOutOfRange");
+                Logger.Error("IndexOutOfRange");
             }
         }
 
@@ -102,8 +102,8 @@ namespace TPpraktika
             }
             catch (IndexOutOfRangeException ex)
             {
-                MessageBox.Show("pidoras");
-                Logger.Error("pidoras");
+                MessageBox.Show("IndexOutOfRange");
+                Logger.Error("IndexOutOfRange");
             }
         }
 
@@ -115,8 +115,8 @@ namespace TPpraktika
             }
             catch (IndexOutOfRangeException ex)
             {
-                MessageBox.Show("pidoras");
-                Logger.Error("pidoras");
+                MessageBox.Show("IndexOutOfRange");
+                Logger.Error("IndexOutOfRange");
             }
         }
 
@@ -128,8 +128,8 @@ namespace TPpraktika
             }
             catch (IndexOutOfRangeException ex)
             {
-                MessageBox.Show("pidoras");
-                Logger.Error("pidoras");
+                MessageBox.Show("IndexOutOfRange");
+                Logger.Error("IndexOutOfRange");
             }
         }
 
@@ -146,7 +146,7 @@ namespace TPpraktika
         {
             foreach (Deleg2 next in method2.GetInvocationList())
             {
-                textBox1.Text += next("her") + "; ";
+                textBox1.Text += next(textBoxMyNum.Text) + "; ";
             }
             Logger.Info("invoke2");
         }
@@ -165,7 +165,7 @@ namespace TPpraktika
                     foreach (var i in classes)
                     {
                         sw.WriteLine(i.Name + " : " + i.ToString() +
-                            " " + i.m1() + " " + i.m1("her"));
+                            " " + i.m1() + " " + i.m1(textBoxMyNum.Text));
                     }
                 }
                 MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);

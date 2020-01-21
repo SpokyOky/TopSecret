@@ -33,12 +33,33 @@ namespace TPpraktika
 
         public string m1()
         {
-            return "m1";
+            int res = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] == 0)
+                {
+                    continue;
+                }
+
+                if ((a[i] % 2 == 0) && (100 % a[i] == 0))
+                {
+                    res++;
+                }
+            }
+            return res.ToString();
         }
 
-        public string m1(string add)
+        public string m1(string num)
         {
-            return "m1" + add;
+            string res = "";
+            for (int i = 0; i < a.Length; i++)
+            {
+                if(a[i] > 0 && a[i] % Convert.ToInt32(num) == 0)
+                {
+                    res += a[i] + " ";
+                }
+            }
+            return res;
         }
 
         public Class1(int size)
@@ -52,7 +73,7 @@ namespace TPpraktika
             a = new int[size];
             for (int i = 0; i < size; i++)
             {
-                a[i] = r.Next(10);
+                a[i] = r.Next(-10, 11);
             }
         }
 

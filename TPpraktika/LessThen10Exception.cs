@@ -8,6 +8,6 @@ namespace TPpraktika
 {
     class LessThen10Exception:Exception
     {
-        public LessThen10Exception() : base("pizdec") { }
+        public LessThen10Exception() : base("LessThen10") { }
     }
 }

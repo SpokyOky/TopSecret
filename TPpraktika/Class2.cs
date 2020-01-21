@@ -20,12 +20,33 @@ namespace TPpraktika
 
         public string m1()
         {
-            return "m1";
+            int res = 0;
+            for (int i = 0; i < a.Count(); i++)
+            {
+                if (a[i] == 0)
+                {
+                    continue;
+                }
+
+                if ((a[i] % 2 == 0) && (100 % a[i] == 0))
+                {
+                    res++;
+                }
+            }
+            return res.ToString();
         }
 
-        public string m1(string add)
+        public string m1(string num)
         {
-            return "m1" + add;
+            string res = "";
+            for (int i = 0; i < a.Count(); i++)
+            {
+                if (a[i] > 0 && a[i] % Convert.ToInt32(num) == 0)
+                {
+                    res += a[i] + " ";
+                }
+            }
+            return res;
         }
 
         public int this[int index]
@@ -47,7 +68,7 @@ namespace TPpraktika
             a = new List<int>(size);
             for (int i = 0; i < size; i++)
             {
-                a.Add(r.Next(10));
+                a.Add(r.Next(-10, 11));
             }
         }
 
