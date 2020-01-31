@@ -41,8 +41,8 @@ namespace TPpraktika
             }
             catch (Menshe10Exception ex)
             {
-                MessageBox.Show("LessThen10");
-                Logger.Error("LessThen10");
+                MessageBox.Show("Menshe10");
+                Logger.Error("Menshe10");
             }
         }
 
@@ -76,8 +76,8 @@ namespace TPpraktika
                 }
             } catch (Menshe10Exception ex)
             {
-                MessageBox.Show("LessThen10");
-                Logger.Error("LessThen10");
+                MessageBox.Show("Menshe10");
+                Logger.Error("Menshe10");
             }
         }
 
