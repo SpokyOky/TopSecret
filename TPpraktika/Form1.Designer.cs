@@ -108,7 +108,7 @@
             this.buttonSetList.Name = "buttonSetList";
             this.buttonSetList.Size = new System.Drawing.Size(87, 23);
             this.buttonSetList.TabIndex = 6;
-            this.buttonSetList.Text = "Создат лист";
+            this.buttonSetList.Text = "Создать лист";
             this.buttonSetList.UseVisualStyleBackColor = true;
             this.buttonSetList.Click += new System.EventHandler(this.buttonSetList_Click);
             // 
