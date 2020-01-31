@@ -18,17 +18,12 @@ namespace TPpraktika
             }
         }
 
-        public string m1()
+        public string method1()
         {
             int res = 0;
             for (int i = 0; i < a.Count(); i++)
             {
-                if (a[i] == 0)
-                {
-                    continue;
-                }
-
-                if ((a[i] % 2 == 0) && (100 % a[i] == 0))
+                if (a[i] == 2)
                 {
                     res++;
                 }
@@ -36,12 +31,12 @@ namespace TPpraktika
             return res.ToString();
         }
 
-        public string m1(string num)
+        public string method1(string num)
         {
             string res = "";
             for (int i = 0; i < a.Count(); i++)
             {
-                if (a[i] > 0 && a[i] % Convert.ToInt32(num) == 0)
+                if (a[i] > 0 && Convert.ToInt32(num) % a[i] == 0)
                 {
                     res += a[i] + " ";
                 }
@@ -66,7 +61,7 @@ namespace TPpraktika
             Random r = new Random();
             if (size < 10)
             {
-                throw new LessThen10Exception();
+                throw new Menshe10Exception();
             }
 
             a = new List<int>(size);
@@ -84,24 +79,6 @@ namespace TPpraktika
                 res += i + " ";
             }
             return res;
-        }
-
-        public int CompareTo(object obj)
-        {
-            if (obj == null) //если сравниваем с пустым обьектом
-            { 
-                return 0;//возвращаем 0
-            }
-
-            if ((obj as Interface).Name == this.Name) //если имена классов совпадают
-            { 
-                return 0;//возвращаем 0
-            }
-            else //иначе рандомно возвращаем -1, 0, 1
-            {
-                Random r = new Random();
-                return r.Next(-1, 2); 
-            }
         }
     }
 }

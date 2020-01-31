@@ -47,7 +47,6 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.buttonSort = new System.Windows.Forms.Button();
             this.textBoxMyNum = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,129 +60,129 @@
             // 
             // buttonSize
             // 
-            this.buttonSize.Location = new System.Drawing.Point(50, 57);
+            this.buttonSize.Location = new System.Drawing.Point(156, 30);
             this.buttonSize.Name = "buttonSize";
-            this.buttonSize.Size = new System.Drawing.Size(75, 23);
+            this.buttonSize.Size = new System.Drawing.Size(100, 23);
             this.buttonSize.TabIndex = 1;
-            this.buttonSize.Text = "Set Size";
+            this.buttonSize.Text = "Сгенерировать ";
             this.buttonSize.UseVisualStyleBackColor = true;
             this.buttonSize.Click += new System.EventHandler(this.buttonSize_Click);
             // 
             // textBoxArray
             // 
-            this.textBoxArray.Location = new System.Drawing.Point(229, 29);
+            this.textBoxArray.Location = new System.Drawing.Point(50, 59);
             this.textBoxArray.Name = "textBoxArray";
             this.textBoxArray.Size = new System.Drawing.Size(303, 20);
             this.textBoxArray.TabIndex = 2;
             // 
             // textBoxMethod
             // 
-            this.textBoxMethod.Location = new System.Drawing.Point(229, 57);
+            this.textBoxMethod.Location = new System.Drawing.Point(359, 59);
             this.textBoxMethod.Name = "textBoxMethod";
             this.textBoxMethod.Size = new System.Drawing.Size(100, 20);
             this.textBoxMethod.TabIndex = 3;
             // 
             // buttonMethod1
             // 
-            this.buttonMethod1.Location = new System.Drawing.Point(335, 55);
+            this.buttonMethod1.Location = new System.Drawing.Point(262, 30);
             this.buttonMethod1.Name = "buttonMethod1";
             this.buttonMethod1.Size = new System.Drawing.Size(75, 23);
             this.buttonMethod1.TabIndex = 4;
-            this.buttonMethod1.Text = "Method1";
+            this.buttonMethod1.Text = "Метод1";
             this.buttonMethod1.UseVisualStyleBackColor = true;
             this.buttonMethod1.Click += new System.EventHandler(this.buttonMethod1_Click);
             // 
             // buttonMethod2
             // 
-            this.buttonMethod2.Location = new System.Drawing.Point(457, 55);
+            this.buttonMethod2.Location = new System.Drawing.Point(343, 30);
             this.buttonMethod2.Name = "buttonMethod2";
             this.buttonMethod2.Size = new System.Drawing.Size(75, 23);
             this.buttonMethod2.TabIndex = 5;
-            this.buttonMethod2.Text = "Method2";
+            this.buttonMethod2.Text = "Метод2";
             this.buttonMethod2.UseVisualStyleBackColor = true;
             this.buttonMethod2.Click += new System.EventHandler(this.buttonMethod2_Click);
             // 
             // buttonSetList
             // 
-            this.buttonSetList.Location = new System.Drawing.Point(50, 103);
+            this.buttonSetList.Location = new System.Drawing.Point(50, 85);
             this.buttonSetList.Name = "buttonSetList";
-            this.buttonSetList.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetList.Size = new System.Drawing.Size(75, 52);
             this.buttonSetList.TabIndex = 6;
-            this.buttonSetList.Text = "Set List";
+            this.buttonSetList.Text = "Создат лист";
             this.buttonSetList.UseVisualStyleBackColor = true;
             this.buttonSetList.Click += new System.EventHandler(this.buttonSetList_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(229, 103);
+            this.listBox1.Location = new System.Drawing.Point(143, 85);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 7;
             // 
             // buttonFollow1
             // 
-            this.buttonFollow1.Location = new System.Drawing.Point(50, 215);
+            this.buttonFollow1.Location = new System.Drawing.Point(278, 85);
             this.buttonFollow1.Name = "buttonFollow1";
             this.buttonFollow1.Size = new System.Drawing.Size(75, 23);
             this.buttonFollow1.TabIndex = 9;
-            this.buttonFollow1.Text = "Follow1";
+            this.buttonFollow1.Text = "Подписка1";
             this.buttonFollow1.UseVisualStyleBackColor = true;
             this.buttonFollow1.Click += new System.EventHandler(this.buttonFollow1_Click);
             // 
             // buttonFollow2
             // 
-            this.buttonFollow2.Location = new System.Drawing.Point(131, 215);
+            this.buttonFollow2.Location = new System.Drawing.Point(359, 85);
             this.buttonFollow2.Name = "buttonFollow2";
             this.buttonFollow2.Size = new System.Drawing.Size(75, 23);
             this.buttonFollow2.TabIndex = 10;
-            this.buttonFollow2.Text = "Follow2";
+            this.buttonFollow2.Text = "Подписка2";
             this.buttonFollow2.UseVisualStyleBackColor = true;
             this.buttonFollow2.Click += new System.EventHandler(this.buttonFollow2_Click);
             // 
             // buttonUnfollow1
             // 
-            this.buttonUnfollow1.Location = new System.Drawing.Point(50, 244);
+            this.buttonUnfollow1.Location = new System.Drawing.Point(278, 114);
             this.buttonUnfollow1.Name = "buttonUnfollow1";
             this.buttonUnfollow1.Size = new System.Drawing.Size(75, 23);
             this.buttonUnfollow1.TabIndex = 11;
-            this.buttonUnfollow1.Text = "Unfollow1";
+            this.buttonUnfollow1.Text = "Отписка1";
             this.buttonUnfollow1.UseVisualStyleBackColor = true;
             this.buttonUnfollow1.Click += new System.EventHandler(this.buttonUnfollow1_Click);
             // 
             // buttonUnfollow2
             // 
-            this.buttonUnfollow2.Location = new System.Drawing.Point(131, 244);
+            this.buttonUnfollow2.Location = new System.Drawing.Point(359, 114);
             this.buttonUnfollow2.Name = "buttonUnfollow2";
             this.buttonUnfollow2.Size = new System.Drawing.Size(75, 23);
             this.buttonUnfollow2.TabIndex = 12;
-            this.buttonUnfollow2.Text = "Unfollow2";
+            this.buttonUnfollow2.Text = "Отписка2";
             this.buttonUnfollow2.UseVisualStyleBackColor = true;
             this.buttonUnfollow2.Click += new System.EventHandler(this.buttonUnfollow2_Click);
             // 
             // buttonInvoke1
             // 
-            this.buttonInvoke1.Location = new System.Drawing.Point(50, 273);
+            this.buttonInvoke1.Location = new System.Drawing.Point(278, 157);
             this.buttonInvoke1.Name = "buttonInvoke1";
             this.buttonInvoke1.Size = new System.Drawing.Size(75, 23);
             this.buttonInvoke1.TabIndex = 13;
-            this.buttonInvoke1.Text = "Invoke1";
+            this.buttonInvoke1.Text = "Вызов1";
             this.buttonInvoke1.UseVisualStyleBackColor = true;
             this.buttonInvoke1.Click += new System.EventHandler(this.buttonInvoke1_Click);
             // 
             // buttonInvoke2
             // 
-            this.buttonInvoke2.Location = new System.Drawing.Point(131, 273);
+            this.buttonInvoke2.Location = new System.Drawing.Point(359, 157);
             this.buttonInvoke2.Name = "buttonInvoke2";
             this.buttonInvoke2.Size = new System.Drawing.Size(75, 23);
             this.buttonInvoke2.TabIndex = 14;
-            this.buttonInvoke2.Text = "Invoke2";
+            this.buttonInvoke2.Text = "Вызов2";
             this.buttonInvoke2.UseVisualStyleBackColor = true;
             this.buttonInvoke2.Click += new System.EventHandler(this.buttonInvoke2_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(229, 215);
+            this.textBox1.Location = new System.Drawing.Point(221, 198);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(303, 20);
             this.textBox1.TabIndex = 15;
@@ -194,7 +193,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -213,19 +212,9 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // buttonSort
-            // 
-            this.buttonSort.Location = new System.Drawing.Point(233, 249);
-            this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(115, 24);
-            this.buttonSort.TabIndex = 17;
-            this.buttonSort.Text = "Sort";
-            this.buttonSort.UseVisualStyleBackColor = true;
-            this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
-            // 
             // textBoxMyNum
             // 
-            this.textBoxMyNum.Location = new System.Drawing.Point(432, 103);
+            this.textBoxMyNum.Location = new System.Drawing.Point(424, 30);
             this.textBoxMyNum.Name = "textBoxMyNum";
             this.textBoxMyNum.Size = new System.Drawing.Size(100, 20);
             this.textBoxMyNum.TabIndex = 18;
@@ -234,9 +223,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 288);
             this.Controls.Add(this.textBoxMyNum);
-            this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonInvoke2);
             this.Controls.Add(this.buttonInvoke1);
@@ -284,7 +272,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.Button buttonSort;
         private System.Windows.Forms.TextBox textBoxMyNum;
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TPpraktika
 {
-    interface Interface : IComparable
+    interface Interface
     {
-        string m1();
-        string m1(string add);
+        string method1();
+        string method1(string add);
 
         int this[int index]
         {

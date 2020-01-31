@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TPpraktika
 {
-    class LessThen10Exception:Exception
+    class Menshe10Exception : Exception
     {
-        public LessThen10Exception() : base("LessThen10") { }
+        public Menshe10Exception() : base("Menshe10") { }
     }
 }

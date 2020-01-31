@@ -39,7 +39,7 @@ namespace TPpraktika
                 cl = new Class1(Convert.ToInt32(textBoxSize.Text));
                 textBoxArray.Text = cl.ToString();
             }
-            catch (LessThen10Exception ex)
+            catch (Menshe10Exception ex)
             {
                 MessageBox.Show("LessThen10");
                 Logger.Error("LessThen10");
@@ -48,12 +48,12 @@ namespace TPpraktika
 
         private void buttonMethod1_Click(object sender, EventArgs e)
         {
-            textBoxMethod.Text = cl.m1();
+            textBoxMethod.Text = cl.method1();
         }
 
         private void buttonMethod2_Click(object sender, EventArgs e)
         {
-            textBoxMethod.Text = cl.m1(textBoxMyNum.Text);
+            textBoxMethod.Text = cl.method1(textBoxMyNum.Text);
         }
 
         private void buttonSetList_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace TPpraktika
                     classes.Add(new Class2(Convert.ToInt32(textBoxSize.Text)));
                     listBox1.Items.Add(classes[i].Name);
                 }
-            } catch (LessThen10Exception ex)
+            } catch (Menshe10Exception ex)
             {
                 MessageBox.Show("LessThen10");
                 Logger.Error("LessThen10");
@@ -85,7 +85,7 @@ namespace TPpraktika
         {
             try
             {
-                method1 += classes[listBox1.SelectedIndex].m1;
+                method1 += classes[listBox1.SelectedIndex].method1;
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -98,7 +98,7 @@ namespace TPpraktika
         {
             try
             {
-                method2 += classes[listBox1.SelectedIndex].m1;
+                method2 += classes[listBox1.SelectedIndex].method1;
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -111,7 +111,7 @@ namespace TPpraktika
         {
             try
             {
-                method1 -= classes[listBox1.SelectedIndex].m1;
+                method1 -= classes[listBox1.SelectedIndex].method1;
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -124,7 +124,7 @@ namespace TPpraktika
         {
             try
             {
-                method2 -= classes[listBox1.SelectedIndex].m1;
+                method2 -= classes[listBox1.SelectedIndex].method1;
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -166,23 +166,13 @@ namespace TPpraktika
                     foreach (var i in classes) //цикл по списку обьектов
                     {
                         sw.WriteLine(i.Name + " : " + i.ToString() + //запись в файл "имя класса" : "элементы массива/списка"
-                            " " + i.m1() + " " + i.m1(textBoxMyNum.Text)); //"результат первого метода" "результат второго метода"
+                            " " + i.method1() + " " + i.method1(textBoxMyNum.Text)); //"результат первого метода" "результат второго метода"
                     }
                 }
                 MessageBox.Show("Сохранение прошло успешно", "Результат",
                     MessageBoxButtons.OK, MessageBoxIcon.Information); //вывод окна, если сохранение прошло успешно
             }
             Logger.Info("save"); //запись в лог о сохранении
-        }
-
-        private void buttonSort_Click(object sender, EventArgs e)
-        {
-            classes.Sort();
-            listBox1.Items.Clear();
-            foreach (var i in classes)
-            {
-                listBox1.Items.Add(i.Name);
-            }
         }
     }
 }
