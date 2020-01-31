@@ -12,9 +12,6 @@ using System.Windows.Forms;
 
 namespace TPpraktika
 {
-    public delegate string Deleg1();
-    public delegate string Deleg2(string add);
-
     public partial class Form1 : Form
     {
         Logger Logger;
@@ -23,8 +20,8 @@ namespace TPpraktika
 
         List<Interface> classes;
 
-        public event Deleg1 method1;
-        public event Deleg2 method2;
+        public event Func<string> method1;
+        public event Func<string, string> method2;
 
         public Form1()
         {
@@ -135,7 +132,7 @@ namespace TPpraktika
 
         private void buttonInvoke1_Click(object sender, EventArgs e)
         {
-            foreach (Deleg1 next in method1.GetInvocationList())
+            foreach (Func<string> next in method1.GetInvocationList())
             {
                 textBox1.Text += next() + "; ";
             }
@@ -144,7 +141,7 @@ namespace TPpraktika
 
         private void buttonInvoke2_Click(object sender, EventArgs e)
         {
-            foreach (Deleg2 next in method2.GetInvocationList())
+            foreach (Func<string, string> next in method2.GetInvocationList())
             {
                 textBox1.Text += next(textBoxMyNum.Text) + "; ";
             }
