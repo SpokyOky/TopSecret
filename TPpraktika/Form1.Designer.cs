@@ -106,7 +106,7 @@
             // 
             this.buttonSetList.Location = new System.Drawing.Point(50, 85);
             this.buttonSetList.Name = "buttonSetList";
-            this.buttonSetList.Size = new System.Drawing.Size(75, 52);
+            this.buttonSetList.Size = new System.Drawing.Size(87, 23);
             this.buttonSetList.TabIndex = 6;
             this.buttonSetList.Text = "Создат лист";
             this.buttonSetList.UseVisualStyleBackColor = true;
